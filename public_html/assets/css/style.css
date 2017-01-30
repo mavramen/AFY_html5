@@ -159,7 +159,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 .navbar-brand {
     width: 167px;
     height: 106px;
-    background: url(../img/logo.gif) left center no-repeat;
+    background: url(../img/afy_logo_official.jpg) left center no-repeat;
     text-indent: -99999px;
 
 }
@@ -909,4 +909,10 @@ div.floatleft {
     position: relative;
     margin: 0 .5em .5em 0;
     border: 0;
+}
+span.gold_ribbon{
+    width: 167px;
+    height: 106px;
+    background: url(../img/gold_ribbon.jpg) left center no-repeat;
+    text-indent: -99999px; 
 }
