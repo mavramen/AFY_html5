@@ -1,8 +1,8 @@
 
 
 @viewport {
-  width: device-width;
-  zoom: 1;
+    width: device-width;
+    zoom: 1;
 }
 
 body {
@@ -263,7 +263,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
     font-size: 30px;
     color: #5d5d5d;
     font-weight: bold;
-    
+
 }
 
 .presentation-container p {
@@ -915,4 +915,19 @@ span.gold_ribbon{
     height: 106px;
     background: url(../img/gold_ribbon.jpg) left center no-repeat;
     text-indent: -99999px; 
+}
+.thumbimage {
+    border: 1px solid #ccc;
+    float: left;
+   
+}
+.thumbinner{
+    
+    padding: 3px !important;
+    background-color: #f8f8f8;
+    margin-top: 0px;
+    overflow: hidden;
+    float: left;
+    text-align: left;
+   
 }
