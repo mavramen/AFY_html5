@@ -315,7 +315,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 
 .service h3 {
     margin-top: 13px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -374,7 +374,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
     margin-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -474,7 +474,7 @@ footer {
 
 .footer-box h4 {
     margin-top: 20px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -586,7 +586,7 @@ footer {
 
 .about-us-text h3 {
     margin-top: 25px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     color: #5d5d5d;
     font-weight: bold;
@@ -604,7 +604,7 @@ footer {
 .about-us-text  .about-div {
     font-style: italic;
     float: left;
-    width: 33%
+    width: 33%;
 }
 
 
@@ -651,7 +651,7 @@ footer {
     margin-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -681,7 +681,7 @@ footer {
 
 .contact-us-container h3 {
     margin-top: 25px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     color: #5d5d5d;
     font-weight: bold;
@@ -741,7 +741,7 @@ footer {
 
 .services-full-width-text h3 {
     margin-top: 25px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     color: #5d5d5d;
     font-weight: bold;
@@ -768,7 +768,7 @@ footer {
 
 .services-half-width-text h3 {
     margin-top: 25px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     color: #5d5d5d;
     font-weight: bold;
@@ -831,7 +831,7 @@ footer {
 .portfolio-filters {
     padding-top: 35px;
     padding-bottom: 10px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     color: #5d5d5d;
     font-weight: bold;
@@ -887,7 +887,7 @@ footer {
 
 .portfolio-box-text h3 {
     margin-top: 20px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -921,13 +921,18 @@ span.gold_ribbon{
     float: left;
    
 }
-.thumbinner{
-    
+.thumbinner{    
     padding: 3px !important;
     background-color: #f8f8f8;
     margin-top: 0px;
     overflow: hidden;
     float: left;
     text-align: left;
-   
+}
+.ttt {
+    text-indent: 0px; 
+}
+
+.textIndent p{ 
+    text-indent: 50px; 
 }
