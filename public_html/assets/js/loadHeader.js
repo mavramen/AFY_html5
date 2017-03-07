@@ -5,5 +5,4 @@ function addToHeader() {
     for (var child = div.firstChild; child !== null; child = child.nextSibling) {
         document.head.appendChild(child.cloneNode(true));
     }
-    //alert('aa');
 }
