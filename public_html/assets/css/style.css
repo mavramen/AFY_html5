@@ -159,7 +159,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 .navbar-brand {
     width: 167px;
     height: 106px;
-    background: url(../img/afy_logo_official.jpg) left center no-repeat;
+    background: url(../img/afy_logo.jpg) left center no-repeat;
     text-indent: -99999px;
 
 }
@@ -340,7 +340,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 }
 
 .work-title h2 {
-    width: 220px;
+    width: 260px;
     margin: 0 auto;
     background: #fff;
     font-family: 'Philosopher', sans-serif;
@@ -919,7 +919,7 @@ span.gold_ribbon{
 .thumbimage {
     border: 1px solid #ccc;
     float: left;
-   
+
 }
 .thumbinner{    
     padding: 3px !important;
@@ -934,8 +934,8 @@ span.gold_ribbon{
     text-indent: 50px; 
 }
 .no-account {
-  color: #888; 
-  opacity: 0.5;
-  pointer-events: none;
-  cursor: default;
+    color: #888; 
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
 }
