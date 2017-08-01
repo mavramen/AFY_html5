@@ -1,4 +1,5 @@
-var oldURL="https://afypa.org/";
+//var oldURL="https://afypa.org/";  //72.52.73.152
+var oldURL="http://72.52.73.152/";  
 
 
 $(document).ready(function () {
