@@ -47,6 +47,8 @@
         <meta name="msapplication-TileImage" content="assets/ico/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
+
+
         <!-- Javascript -->
 
         <script src="assets/js/jquery-1.11.1.min.js"></script>
@@ -65,87 +67,64 @@
         <script src="https://use.fontawesome.com/4838e0fd0b.js"></script>
         <script src="assets/js/afy.js"></script>
 
+
+
+        <script>
+
+            $(document).ready(function () {
+                $("#portal-container").html('<iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=afypaweb%40gmail.com&amp;color=%23853104&amp;src=us0gmr5lamsf3013rf22iggd0g%40group.calendar.google.com&amp;color=%231B887A&amp;src=p%23weather%40group.v.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>');
+
+                $("#page-object").ready(function () {
+                    //console.log($("#page-object").width() );
+                    //console.log($("#page-object").parent().width() );
+                    $("#page-object").width($("#page-object").parent().width()); 
+                    //$("#page-object").css({ opacity: 0.9 });
+                    $("#page-object").parent().addClass("googleCal");
+                })
+            });
+        </script>
+
     </head>
+
 
     <body>
 
         <!-- Top menu -->
-        <nav class="navbar community" role="navigation" id="nav-container">
+        <nav class="navbar resources" role="navigation" id="nav-container">
 
         </nav>
+
+
         <div class="page-title-container">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
-                        <i class="fa fa-heart"></i>
-                        <h1>Volunteering /</h1>
-                        <p>Here are the information about volunteerings</p>
+                        <i class="fa fa-info-circle"></i>
+                        <h1>Calendar /</h1>
+                        <p>Here are the information about school events</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Services Full Width Text -->
-        <div class="services-full-width-container bigger1">
+        <div class="services-full-width-container">
             <div class="container">
-
                 <div class="row">
-                    <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-                        <div id="portal-container">
-                            <p>
-                                Alice Fong Yu Alternative School is an exemplary educational community in large part because of parent involvement. 
-                                Parents volunteer in the classroom, on governing councils such as the School Site Council and Parents Association, and for 
-                                school-wide special events. The commitment and leadership of parents at AFY provides a strong network of volunteers with a 
-                                can-do attitude and who support the uniquely high standards of the AFY principal, teachers, and staff.
-                                Parents are encouraged to volunteer. Some weekly volunteer opportunities are as follows:
-                            </p>
-                            <ul>
-                                <li> Class parent</li>
-                                <li> Reading in Chinese or English </li>
-                                <li> Morning drop-off zone</li>
-                                <li> Before or after-school tutoring</li>
-                                <li> Art class assistance</li>
-                                <li> Garden assistance</li>
-                            </ul>
-                            <p>
-                                AFY offers ample special events, which are not feasible without parent volunteers. These are rewarding, memory-making endeavors 
-                                for parents and their AFY children.
-                            </p>
-                            <ul>
-                                <li> China Cultural Exchange Program</li>
-                                <li> Chinese New Year Parade</li>
-                                <li> Fall Carnival</li>
-                                <li> Science Fair (Middle School)</li>
-                                <li> Spring Festival</li>
-                                <li> Spring Auction</li>
-                                <li> Walk the Great Wall</li>
-                            </ul>
+                    <div class="col-sm-12 services-full-width-text wow fadeInLeft" style="padding: 0px;">
+                        <div id="portal-container" >
+
                         </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-                        <p>VOLUNTEER BOOKLET&nbsp;:&nbsp;</p>
-                        <object width="100%" height="600" type="application/pdf" data="assets/docs/VOLUNTEER BOOKLET.pdf?#zoom=105&scrollbar=0&navpanes=0" title="VOLUNTEER BOOKLET">
-                            <!--object width="100%" height="8650" type="application/pdf" data="assets/docs/VOLUNTEER BOOKLET.pdf?#zoom=105&scrollbar=0&toolbar=0&navpanes=0" title="VOLUNTEER BOOKLET"-->
-                            <p>The PDF cannot be displayed.</p>
-                        </object>
-                    </div>
-                </div>
-
-
             </div>
         </div>
-
-
-
-
 
 
         <!-- Call To Donation -->              
         <div class="call-to-donation-container" id="donation-container">           
         </div>
+
         <script>
             $(this).loadDonate();
         </script>
