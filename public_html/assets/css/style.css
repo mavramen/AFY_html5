@@ -1017,4 +1017,6 @@ span.gold_ribbon{
     height: 600px;
 }
 .pdfobject { border: 1px solid #666; }
-
+.pdfobject-container1 { 
+    height: 840px;
+}
