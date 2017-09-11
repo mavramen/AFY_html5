@@ -1020,3 +1020,7 @@ span.gold_ribbon{
 .pdfobject-container1 { 
     height: 840px;
 }
+.fall {
+    background: url(../img/portfolio/fall.jpeg) left center repeat-x;
+    opacity: 0.5;
+}
