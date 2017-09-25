@@ -1,5 +1,5 @@
-//var oldURL="https://afypa.org/";  //72.52.73.152
-var oldURL = "https://72.52.73.152/";
+var oldURL = "https://72.52.73.152/";  //url for website www.afypa.org
+var tourSchoolURL="https://goo.gl/sLeYW9";
 
 
 $(document).ready(function () {
@@ -57,7 +57,6 @@ jQuery.fn.extend({
 
     },
     loadURL: function (location) {
-        console.log('here');
         window.open(location);
         return false;
     }

@@ -343,8 +343,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 .work-title {
     background: url(../img/line.png) left center repeat-x;
 }
-
-.work-title h2 {
+.work-title h2, .work-title h3 {
     width: 260px;
     margin: 0 auto;
     background: #fff;
@@ -353,7 +352,9 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
     color: #5d5d5d;
     font-weight: bold;
 }
-
+.work-title h3 {
+    font-size: 18px;
+}
 .work {
     margin-top: 40px;
     padding-bottom: 20px;
@@ -375,7 +376,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
     margin-top: 15px;
 }
 
-.work h3 {
+.work h3  {
     margin-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
@@ -1014,13 +1015,13 @@ span.gold_ribbon{
 {background-color:red;}
 
 .pdfobject-container { 
-    height: 600px;
+    height: 400px;
 }
-.pdfobject { border: 1px solid #666; }
+
+
 .pdfobject-container1 { 
     height: 840px;
 }
-.fall {
-    background: url(../img/portfolio/fall.jpeg) left center repeat-x;
-    opacity: 0.5;
+.tour{
+  padding-left: 8px;
 }
