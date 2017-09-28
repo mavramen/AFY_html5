@@ -99,9 +99,14 @@
                             Tours begin at 9:30 and last approximately one hour.......<br/>
                             Our friendly tour guides are ready to introduce you to Alice Fong Yu.<br/><br/>
                             To register for a tour, follow the link  
-                            <!--a href="https://goo.gl/sLeYW9" target="_blank">Register here!&nbsp;</a-->
-                            <a href="javascript:void(0)" target="_blank" onclick="javascript:$(this).loadURL(tourSchoolURL);">Register here!&nbsp;</a>
-                            <a class="big-link-2 tour" href="javascript:void(0)" onclick="javascript:$(this).loadURL(tourSchoolURL);" target="_blank"><i class="fa fa-clock-o"></i></a>
+                            <a class="schooltourlink" href="#" target="_blank">Register here!&nbsp;</a>
+                            <a class="big-link-2 tour schooltourlink" href="#" target="_blank"><i class="fa fa-clock-o"></i></a>
+                            <script> 
+                                $('.schooltourlink').click(function(){
+                                    $(this).attr('href',tourSchoolURL);
+                                    
+                                }) 
+                            </script>
                             <br/><br/>
                             We’re looking forward to seeing you on campus!
                         </p>

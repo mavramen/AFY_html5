@@ -64,142 +64,18 @@
         <script src="https://use.fontawesome.com/4838e0fd0b.js"></script>
         <script src="assets/js/afy.js"></script>
 
-        <!--script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script-->
-        <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad">
-</script>
-        <!--script async defer src="https://apis.google.com/js/api.js" onload="this.onload = function () {};handleClientLoad()"
-                onreadystatechange="if (this.readyState === 'complete') this.onload()">
-        </script-->
+        <script src="assets/js/jquery-dateFormat.min.js"></script>
+
+
+
 
         <script>
-
             var dirID = '0B2O1Jb96t9jhZUdoNU0ySDJjN00';
-            // Client ID and API key from the Developer Console
-            var CLIENT_ID = '100213111164-v8un5cp1i6r6tesr0cd1gsc4jc6t7evb.apps.googleusercontent.com';
-            var API_KEY = 'AIzaSyBuW_tArn70PeThSmTIDFNLyfSG_piFKQQ';
-
-            // Array of API discovery doc URLs for APIs used by the quickstart
-            var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
-
-            // Authorization scopes required by the API; multiple scopes can be
-            // included, separated by spaces.
-            var SCOPES = 'https://www.googleapis.com/auth/drive';
-            // 'https://www.googleapis.com/auth/drive.metadata.readonly';
-
-            /*var authorizeButton = document.getElementById('authorize-button');
-             var signoutButton = document.getElementById('signout-button');*/
-
-            /**
-             *  On load, called to load the auth2 library and API client library.
-             */
-
-            var handleClientLoad = function () {
-                console.log('handleClientLoad');
-                window.setTimeout(checkAuth, 1);
-            }
-
-            var checkAuth = function () {
-                gapi.auth.authorize(
-                        {'client_id': CLIENT_ID, 'scope': SCOPES, 'immediate': true},
-                        handleAuthResult);
-            }
-
-            var checkAuthNonImmediate = function () {
-                gapi.auth.authorize(
-                        {'client_id': CLIENT_ID, 'scope': SCOPES, 'immediate': false},
-                        handleAuthResult);
-            }
-            var handleAuthResult = function (authResult) {
-                //$("#authorizeButton").hide();
-                if (authResult && !authResult.error) {
-                    listFiles();
-                } else {
-                    //$("#authorizeButton").show();
-                    //$("#authorizeButton").attr("onclick", "checkAuthNonImmediate();");
-                }
-            }
-            /*function handleClientLoad() {
-             console.log('handleClientLoad');
-             gapi.load('client:auth2', initClient);
-             }*/
-            function initClient() {
-                gapi.client.init({
-                    apiKey: API_KEY,
-                    clientId: CLIENT_ID,
-                    discoveryDocs: DISCOVERY_DOCS,
-                    scope: SCOPES
-                }).then(function () {
-                    // Listen for sign-in state changes.
-                    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-
-                    // Handle the initial sign-in state.
-                    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-                    /*authorizeButton.onclick = handleAuthClick;
-                     signoutButton.onclick = handleSignoutClick;*/
-
-
-                });
-            }
-
-            function updateSigninStatus(isSignedIn) {
-                console.log('updateSigninStatus  isSignedIn=' + isSignedIn);
-                if (isSignedIn) {
-                    /*authorizeButton.style.display = 'none';
-                     signoutButton.style.display = 'block';*/
-                    listFiles();
-                } else {
-                    console.log('no isSignedIn');
-                    /*authorizeButton.style.display = 'block';
-                     signoutButton.style.display = 'none';*/
-                }
-            }
-            function appendPre(message) {
-                $('#docs-container123').appendChild(document.createTextNode(message + '\n'));
-            }
-
-            function listFiles() {
-                console.log('listFiles');
-                gapi.client.drive.files.list({
-                    'pageSize': 100,
-                    'fields': "nextPageToken, files(id, name)",
-                    'orderBy': "folder desc,createdTime desc, name",
-                    'q': "mimeType != 'application/vnd.google-apps.folder' and trashed = false and parents in '" + dirID + "'" // get folders
-                }).then(function (response) {
-                    //appendPre('Files:');
-                    console.log(response.result);
-                    var files = response.result.files;
-                    //console.log(files);
-                    if (files && files.length > 0) {
-                        for (var i = 0; i < files.length; i++) {
-                            var file = files[i];
-                            appendPre(i + '   ' + file.name + '    (' + file.id + ')');
-                            //document.write("<a href='https://drive.google.com/open?id="+file.id+"'>"+file.name + '</a> <br>');
-                        }
-
-                    } else {
-                        appendPre('No files found.');
-                    }
-                });
-            }
-
-
-
-
             $(document).ready(function () {
-                $("#docs-container").html('<iframe id="page-object" src="https://drive.google.com/embeddedfolderview?id=0B2O1Jb96t9jhZUdoNU0ySDJjN00#list" width="800" height="600" frameborder="0"></iframe>');
-                //https://www.googleapis.com/drive/v2/files/0B2O1Jb96t9jhZUdoNU0ySDJjN00/children?orderBy=createdDate
-                //https://drive.google.com/embeddedfolderview?id=0B2O1Jb96t9jhZUdoNU0ySDJjN00#list
-                //GET https://www.googleapis.com/drive/v2/files?q=0B2O1Jb96t9jhZUdoNU0ySDJjN00'+in+parents&key=AIzaSyBuW_tArn70PeThSmTIDFNLyfSG_piFKQQ
-
-                $('#page-object').ready(function () {
-                    //$('body', $('iframe').contents()).html('Hello World!');
-                    //$(".flip-entry").css("border", "13px solid red");
-                    //console.log($(this).contents());
-                    //handleClientLoad();
-                });
-
-
-
+                //$("#docs-container").html('<iframe id="page-object" src="https://drive.google.com/embeddedfolderview?id=0B2O1Jb96t9jhZUdoNU0ySDJjN00#list" width="800" height="600" frameborder="0"></iframe>');
+                //$('#page-object').ready(function () {
+                    $(this).listGoogleDocsFiles("docs-container", dirID);
+                //});
             });
         </script>
 
@@ -209,7 +85,7 @@
 
         <!-- Top menu -->
         <nav class="navbar community" role="navigation" id="nav-container">
-            <!-- test123 -->
+
         </nav>
 
         <div class="page-title-container">
@@ -218,7 +94,7 @@
                     <div class="col-sm-12 wow fadeIn">
                         <i class="fa fa-info-circle"></i>
                         <h1>Documents /</h1>
-                        <p>Here are some documents - <span class="textFontSizeGrade">General</span></p>
+                        <p>Here are some documents - <span class="textFontSizeGrade">Weekly Bulletin</span></p>
                     </div>
                 </div>
             </div>
@@ -237,20 +113,7 @@
             </div>
         </div>
 
-        <!-- Services Full Width Text -->
-        <div class="services-full-width-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 services-full-width-text wow fadeInLeft" style="padding: 0px;">
-                        <div id="docs-container123" >
-                            <!--iframe src="https://app.box.com/embed/s/5yoapzj5pogat8cga5t4vekb4fgm64u7?sortColumn=date&view=list&showItemFeedActions=false&showParentPath=false" width="800" height="600" frameborder="0" allowfullscreen webkitallowfullscreen msallowfullscreen>
-                            </iframe-->
-                            <!--iframe src="https://onedrive.live.com/embed?cid=731A90603FDBF8A0&resid=731A90603FDBF8A0%21105&authkey=ALL-CbHLcURnmY4" width="165" height="128" frameborder="0" scrolling="no"></iframe-->                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
 
 
         <!-- Call To Donation -->

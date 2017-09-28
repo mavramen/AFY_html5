@@ -2,6 +2,7 @@
 <html lang="en">
 
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,18 +63,8 @@
         <script src="assets/js/jquery.ui.map.min.js"></script>
         <script src="assets/js/scripts.js"></script>
         <script src="https://use.fontawesome.com/4838e0fd0b.js"></script>
+        <script src="assets/js/pdfobject.min.js"></script>
         <script src="assets/js/afy.js"></script>
-        <script src="assets/js/jquery-dateFormat.min.js"></script>
-
-
-        <script>
-            $(document).ready(function () {
-                //$("#docs-container").html('<iframe id="page-object" src="https://drive.google.com/embeddedfolderview?id=0B2O1Jb96t9jhODJrcG5Bb09fLTA#list" width="800" height="600" frameborder="0"></iframe>');
-                var dirID = '0B2O1Jb96t9jhODJrcG5Bb09fLTA';
-                $(this).listGoogleDocsFiles("docs-container", dirID);
-
-            });
-        </script>
 
     </head>
 
@@ -81,59 +72,57 @@
 
         <!-- Top menu -->
         <nav class="navbar community" role="navigation" id="nav-container">
-            <!-- test123 -->
-        </nav>
 
+        </nav>
         <div class="page-title-container">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
-                        <i class="fa fa-info-circle"></i>
-                        <h1>Documents /</h1>
-                        <p>Here are some documents - <span class="textFontSizeGrade">7</span><sup>th</sup> Grade</p>
+                        <i class="fa fa-road"></i>
+                        <h1>Walk the Great Wall  /</h1>
+                        <p>Here are the information about Walkathon</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Services Full Width Text -->
-        <div class="services-full-width-container">
+        <div class="services-full-width-container bigger1">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 services-full-width-text wow fadeInLeft" style="padding: 0px;">
-                        <div id="docs-container" >
 
-                        </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        It’s that time of the year again in which the AFY school community hosts the annual walkathon to raise money.
+                        Fundraising can be a fun journey. Join us to walk the Great Wall. 
                     </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <iframe src="https://drive.google.com/file/d/0B2O1Jb96t9jhY3REb1JZRUpQWTg/preview" width="500" height="780"></iframe>
+                    </div>
+                    <div class="col-sm-6">
+                        <iframe src="https://drive.google.com/file/d/0B2O1Jb96t9jhQTlRamE1bGF1VGs/preview" width="500" height="780"></iframe>
+                    </div>
+
                 </div>
             </div>
-        </div>
 
-        <!-- Services Full Width Text -->
-        <div class="services-full-width-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 services-full-width-text wow fadeInLeft" style="padding: 0px;">
-                        <div id="docs-container123" >
 
-                        </div>
-                    </div>
-                </div>
+
+
+
+
+            <!-- Call To Donation -->              
+            <div class="call-to-donation-container" id="donation-container">           
             </div>
-        </div>
+            <script>
+                $(this).loadDonate();
+            </script>
 
-
-
-
-        <!-- Call To Donation -->
-        <div class="call-to-donation-container" id="donation-container">           
-        </div>
-        <script>
-            $(this).loadDonate();
-        </script>
-
-        <!-- Footer -->
-        <footer id="footer-container"></footer>
+            <!-- Footer -->
+            <footer id="footer-container"></footer>
 
 
     </body>

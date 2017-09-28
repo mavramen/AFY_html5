@@ -1,6 +1,8 @@
 var oldURL = "https://72.52.73.152/";  //url for website www.afypa.org
-var tourSchoolURL="https://goo.gl/sLeYW9";
-
+var tourSchoolURL = "https://goo.gl/sLeYW9";
+var volunteerBooklet = "assets/docs/VOLUNTEER BOOKLET.pdf";
+var CLIENT_ID = '100213111164-v8un5cp1i6r6tesr0cd1gsc4jc6t7evb.apps.googleusercontent.com';
+var API_KEY = 'AIzaSyBuW_tArn70PeThSmTIDFNLyfSG_piFKQQ';
 
 $(document).ready(function () {
 
@@ -59,5 +61,59 @@ jQuery.fn.extend({
     loadURL: function (location) {
         window.open(location);
         return false;
+    },
+    listGoogleDocsFiles: function (containerID, dirID) {
+        var url = "https://www.googleapis.com/drive/v3/files?orderBy=folder+desc%2CcreatedTime+desc%2C+name&pageSize=100&q='" + dirID + "'+in+parents&fields=files%2CincompleteSearch%2Ckind%2CnextPageToken&key=" + API_KEY;
+        /* The setup
+         *  
+         *  Generate the public URL. Go to: https://developers.google.com/apis-explorer/?hl=en_GB#p/drive/v3/drive.files.list
+         
+         In the 'q' field enter the following:
+         
+         '{your_public_folder_id}' in parents
+         Click the "Execute without OAuth" link underneath the button.
+         
+         You should now see all your files listed underneath. It also show you the GET request. That is the URL you will need.
+         
+         Copy the Request URL. Something like: https://www.googleapis.com/drive/v3/files?q='{your_public_folder_id}'+in+parents&key={YOUR_API_KEY}
+         
+         Now, you will need to generate the API key. Go to Google Console: https://console.developers.google.com/ In left menu select 'Credentials'. Click 'Create credentials' and select API key. Click 'Browser key' Copy the generate key.
+         
+         */
+
+        console.log('listFiles');
+        $.getJSON(url, function (response) {
+            //console.log("success");
+
+            var files = response.files;
+            //console.log(files);
+            if (files && files.length > 0) {
+                var rows = '<div class="row underline">' +
+                        '<div class="col-sm-4 services-full-width-text wow fadeInLeft"><h3>&nbsp;&nbsp;&nbsp;&nbsp;TITLE&nbsp;&nbsp;&nbsp;&nbsp;</h3></div>' +
+                        '<div class="col-sm-4 services-full-width-text wow fadeInLeft"><h3>LAST MODIFIED&nbsp;&nbsp;</h3></div>' +
+                        '<div class="col-sm-4 services-full-width-text wow fadeInLeft"><h3>MODIFIED BY&nbsp;&nbsp;</h3></div>' +
+                        '</div>';
+                for (var i = 0; i < files.length; i++) {
+                    var file = files[i];
+                    rows += '<div class="row underline">' +
+                            '<div class="col-sm-4 presentation-container1 wow fadeInLeft"><p><a class="big-link-2 tour link-icon" href="https://drive.google.com/file/d/' + file.id +
+                            '/view?usp=drive_web" target="_blank" id="' + file.name + '"></a>&nbsp;&nbsp;&nbsp;&nbsp;' + file.name + '&nbsp;&nbsp;</p></div>' +
+                            '<div class="col-sm-4 presentation-container1 wow fadeInLeft"><p>' + $.format.date(file.createdTime, "MMM  d  yyyy") + '&nbsp;&nbsp;</p></div>' +
+                            '<div class="col-sm-4 presentation-container1 wow fadeInLeft"><p>' + file.lastModifyingUser.displayName + '&nbsp;&nbsp;</p></div></div>';
+                }
+
+                $("#" + containerID).html(rows);
+
+            } else {
+                $("#" + containerID).html('No files found.');
+            }
+        }).done(function () {
+            console.log("second success");
+        }).fail(function () {
+            console.log("error");
+        }).always(function () {
+            console.log("complete");
+        });
+
     }
 });
