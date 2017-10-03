@@ -63,28 +63,8 @@ jQuery.fn.extend({
         return false;
     },
     listGoogleDocsFiles: function (containerID, dirID) {
-        var url = "https://www.googleapis.com/drive/v3/files?orderBy=folder+desc%2CcreatedTime+desc%2C+name&pageSize=100&q='" + dirID + "'+in+parents&fields=files%2CincompleteSearch%2Ckind%2CnextPageToken&key=" + API_KEY;
-        /* The setup
-         *  
-         *  Generate the public URL. Go to: https://developers.google.com/apis-explorer/?hl=en_GB#p/drive/v3/drive.files.list
-         
-         In the 'q' field enter the following:
-         
-         '{your_public_folder_id}' in parents
-         Click the "Execute without OAuth" link underneath the button.
-         
-         You should now see all your files listed underneath. It also show you the GET request. That is the URL you will need.
-         
-         Copy the Request URL. Something like: https://www.googleapis.com/drive/v3/files?q='{your_public_folder_id}'+in+parents&key={YOUR_API_KEY}
-         
-         Now, you will need to generate the API key. Go to Google Console: https://console.developers.google.com/ In left menu select 'Credentials'. Click 'Create credentials' and select API key. Click 'Browser key' Copy the generate key.
-         
-         */
-
-        console.log('listFiles');
-        $.getJSON(url, function (response) {
-            //console.log("success");
-
+        //console.log('listGoogleDocsFiles');
+        $(this).listGoogleDocsFilesJSON(dirID, 100, function (response) {
             var files = response.files;
             //console.log(files);
             if (files && files.length > 0) {
@@ -107,10 +87,42 @@ jQuery.fn.extend({
             } else {
                 $("#" + containerID).html('No files found.');
             }
-        }).done(function () {
+        });
+    },
+    createLinkToNewestFile: function (dirID, hrefID) {
+        //console.log("createLinkToNewestFile");
+        $(this).listGoogleDocsFilesJSON(dirID, 1, function (response) {
+            var files = response.files;
+            if (files && files.length > 0) {
+                $('#' + hrefID).attr('href', 'https://drive.google.com/file/d/' + files[0].id + '/view?usp=drive_web').attr('target', '_blank');
+            }
+        });
+    },
+    listGoogleDocsFilesJSON: function (dirID, numOfFiles, funcResponse) {
+        // console.log("listGoogleDocsFilesJSON");
+        var url = "https://www.googleapis.com/drive/v3/files?orderBy=folder+desc%2CcreatedTime+desc%2C+name&pageSize=" + numOfFiles + "&q='" + dirID + "'+in+parents&fields=files%2CincompleteSearch%2Ckind%2CnextPageToken&key=" + API_KEY;
+        //https://www.googleapis.com/drive/v3/files?orderBy=folder+desc%2CcreatedTime+desc%2C+name&pageSize=100&q='0B2O1Jb96t9jhZUdoNU0ySDJjN00+in+parents&fields=files%2CincompleteSearch%2Ckind%2CnextPageToken&key=AIzaSyBuW_tArn70PeThSmTIDFNLyfSG_piFKQQ
+        /* The setup
+         *  
+         *  Generate the public URL. Go to: https://developers.google.com/apis-explorer/?hl=en_GB#p/drive/v3/drive.files.list
+         
+         In the 'q' field enter the following:
+         
+         '{your_public_folder_id}' in parents
+         Click the "Execute without OAuth" link underneath the button.
+         
+         You should now see all your files listed underneath. It also show you the GET request. That is the URL you will need.
+         
+         Copy the Request URL. Something like: https://www.googleapis.com/drive/v3/files?q='{your_public_folder_id}'+in+parents&key={YOUR_API_KEY}
+         
+         Now, you will need to generate the API key. Go to Google Console: https://console.developers.google.com/ In left menu select 'Credentials'. Click 'Create credentials' and select API key. Click 'Browser key' Copy the generate key.
+         
+         */
+        $.getJSON(url, funcResponse).done(function () {
             console.log("second success");
         }).fail(function () {
-            console.log("error");
+            var err = textStatus + ", " + error;
+            console.log("Request Failed: " + err);
         }).always(function () {
             console.log("complete");
         });

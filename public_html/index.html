@@ -292,7 +292,13 @@
                             <div class="service-icon"><i class="fa fa-sticky-note"></i></div>
                             <h3>Weekly Parent Bulletin</h3>
                             <p>Our weekly Parental Bulletin will keep you up to date with what's happening in and out of school in the coming week.</p>
-                            <a class="big-link-1" href="docsWeekly.html">Read more</a>
+                            <a class="big-link-1" href="docsWeekly.html" id="weekBul">Read more</a>
+                            <script>
+                                //console.log($('#weekBul').attr('href'));
+                                var dirID = '0B2O1Jb96t9jhZUdoNU0ySDJjN00';
+                                $(this).createLinkToNewestFile(dirID,'weekBul');
+                                //console.log($('#weekBul').attr('href'));
+                            </script>
                         </div>
                     </div>
                 </div>
