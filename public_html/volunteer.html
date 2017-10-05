@@ -156,12 +156,23 @@
                         </object-->
                             <div id="pdfObject"></div>
                             <script>
-                                var options = {
-                                    fallbackLink: "<p>This browser does not support inline PDFs. Please download the VOLUNTEER BOOKLET.pdf : <a href='[url]'>Download file</a></p>",
-                                    pdfOpenParams: {page: 1, zoom: 85, scrollbar: 1, navpanes: 1}
-                                };
-                                PDFObject.embed(volunteerBooklet, "#pdfObject", options);
+                                if (PDFObject.supportsPDFs) {
+                                    //console.log("Yay, this browser supports inline PDFs.");
+                                    var options = {
+                                        fallbackLink: "<p>This browser does not support inline PDFs. Please download the VOLUNTEER BOOKLET.pdf : <a href='[url]'>Download file</a></p>",
+                                        pdfOpenParams: {page: 1, zoom: 85, scrollbar: 1, navpanes: 1}
+                                    };
+                                    PDFObject.embed(volunteerBooklet, "#pdfObject", options);
+
+                                } else {
+                                    //console.log("Boo, inline PDFs are not supported by this browser");
+                                    $("#pdfObject").html("<object data='"+volunteerBooklet+"#zoom=85&scrollbar=1&navpanes=1&page=1' "+
+                                    "type='application/pdf' width='100%' height='440px'></object>")
+                                }
                             </script>
+                            <br/>
+                            <div id="pdfObject1"></div>
+                            
                         </div>
 
                     </div>
@@ -212,11 +223,11 @@
                                     <img src="assets/img/portfolio/dropp4.jpg" alt="Submit please" data-at2x="assets/img/portfolio/dropp4.jpg">
                                     <div data-wow-duration="2s" data-wow-iteration="80" class="wow pulse">
                                         <h3>If YOU want to volunteer, PLEASE sign up here </h3>
-                                        </div>
-                                        <div class="work-bottom">
-                                            <a class="big-link-2" href="http://www.signupgenius.com/go/20f0444afad2ca3fd0-afydrop" target="_blank"><i class="fa fa-user-plus"></i></a>
-                                        </div>
-                                    
+                                    </div>
+                                    <div class="work-bottom">
+                                        <a class="big-link-2" href="http://www.signupgenius.com/go/20f0444afad2ca3fd0-afydrop" target="_blank"><i class="fa fa-user-plus"></i></a>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
