@@ -2,6 +2,7 @@
 <html lang="en">
 
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,18 +60,8 @@
         <script src="assets/js/jquery.ui.map.min.js"></script>
         <script src="assets/js/scripts.js"></script>
         <script src="https://use.fontawesome.com/4838e0fd0b.js"></script>
+        <script src="assets/js/pdfobject.min.js"></script>
         <script src="assets/js/afy.js"></script>
-        <script src="assets/js/jquery-dateFormat.min.js"></script>
-
-
-        <script>
-            $(document).ready(function () {
-                //$("#docs-container").html('<iframe id="page-object" src="https://drive.google.com/embeddedfolderview?id=0B2O1Jb96t9jhTVNUMS1rUU1KY2M#list" width="800" height="600" frameborder="0"></iframe>');
-                var dirID = '0B2O1Jb96t9jhTVNUMS1rUU1KY2M';
-                $(this).listGoogleDocsFiles("docs-container", dirID);
-
-            });
-        </script>
 
     </head>
 
@@ -78,59 +69,81 @@
 
         <!-- Top menu -->
         <nav class="navbar community" role="navigation" id="nav-container">
-            <!-- test123 -->
-        </nav>
 
+        </nav>
         <div class="page-title-container">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
-                        <i class="fa fa-info-circle"></i>
-                        <h1>Documents /</h1>
-                        <p>Here are some documents - <span class="textFontSizeGrade">8</span><sup>th</sup> Grade</p>
+                        <i class="fa fa-glass"></i>
+                        <h1>Chinese New Year Benefit Banquet fundraiser /</h1>
+                        <p>Here are the information about CNY Banquet</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Services Full Width Text -->
-        <div class="services-full-width-container">
+        <div class="work-container bigger1">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 services-full-width-text wow fadeInLeft" style="padding: 0px;">
-                        <div id="docs-container" >
-
+                    <div class="col-sm-12 wow fadeIn">
+                        It’s that time of the year again in which the AFY school community hosts the annual walkathon to raise money.
+                        Fundraising can be a fun journey. Join us to CNY Banquet. <br/><br/><br/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="work-title wow fadeIn">
+                            <h3>ADDITIONAL FILES</h3>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Services Full Width Text -->
-        <div class="services-full-width-container">
-            <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 services-full-width-text wow fadeInLeft" style="padding: 0px;">
-                        <div id="docs-container123" >
-
+                    <div class="col-sm-4">
+                        <div class="work wow fadeInDown">
+                            <img src="assets/img/flyers/flyer4.jpg" alt="Flyer" data-at2x="assets/img/flyers/flyer4.jpg">
+                            <h3>Saturday, February 3, 2018</h3>
+                            <div class="work-bottom">
+                                Read more here ...<br/>
+                                <a class="big-link-2" href="https://drive.google.com/file/d/1HtvjTIhT1dpaf7vwjjNOJEgYsh-9j_11/preview" target="_blank"><i class="fa fa-file-word-o"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="col-sm-4">
+                        <div class="work wow fadeInDown">
+                            <img src="assets/img/flyers/flyer3.jpg" alt="Ruffle Elementary" data-at2x="assets/img/flyers/flyer3.jpg">
+                            <h3>Ruffle Ticket Info Elementary</h3>
+                            <div class="work-bottom">
+                                Read more here ...<br/>
+                                <a class="big-link-2" href="https://drive.google.com/file/d/1LeEYL-GHF-4EOPoqNWS4IvHbbQcvsvMc/preview" target="_blank"><i class="fa fa-file-word-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="work wow fadeInDown">
+                            <img src="assets/img/flyers/flyer3.jpg" alt="Ruffle Middle" data-at2x="assets/img/flyers/flyer3.jpg">
+                            <h3>Ruffle Ticket Info Middle</h3>
+                            <div class="work-bottom">
+                                Read more here ...<br/>
+                                <a class="big-link-2" href="https://drive.google.com/file/d/1IBrrNfYOSKRFVIRDhUC3qceTILXP1Tuc/preview" target="_blank"><i class="fa fa-file-word-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
             </div>
-        </div>
 
 
 
+            <!-- Call To Donation -->              
+            <div class="call-to-donation-container" id="donation-container">           
+            </div>
+            <script>
+                $(this).loadDonate();
+            </script>
 
-        <!-- Call To Donation -->
-        <div class="call-to-donation-container" id="donation-container">           
-        </div>
-        <script>
-            $(this).loadDonate();
-        </script>
-
-        <!-- Footer -->
-        <footer id="footer-container"></footer>
+            <!-- Footer -->
+            <footer id="footer-container"></footer>
 
 
     </body>
