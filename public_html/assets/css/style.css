@@ -648,7 +648,7 @@ footer {
     padding-bottom: 15px;
     background: #f8f8f8;
     border-bottom: 2px solid #AA381E;
-    
+
 }
 
 .team-box:hover img {
@@ -864,7 +864,8 @@ footer {
     margin: 40px 15px 0 15px;
 }
 
-.portfolio-box img {
+
+.portfolio-box img{
     cursor: pointer;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
@@ -956,27 +957,27 @@ span.gold_ribbon{
     cursor: default;
 }
 .floatleft {
-	float: left;
-	clear: left;
-	position: relative;
-	margin: 0 .5em .5em 0;
-	border: 0;
+    float: left;
+    clear: left;
+    position: relative;
+    margin: 0 .5em .5em 0;
+    border: 0;
 }
 .floatright {
-	float: right;
-	clear: right;
-	position: relative;
-	margin: 0 .5em .5em 0;
-	border: 0;
+    float: right;
+    clear: right;
+    position: relative;
+    margin: 0 .5em .5em 0;
+    border: 0;
 }
 .textAlignLeft {
-     text-align: left;
+    text-align: left;
 }
 .textMarginLeft {
-     margin-left: 30px;
+    margin-left: 30px;
 }
 .textFontSizeGrade {
-     font-size: 17px;
+    font-size: 17px;
 }
 
 .paymentAddress{
@@ -1029,7 +1030,7 @@ span.gold_ribbon{
     height: 840px;
 }
 .tour{
-  padding-left: 8px;
+    padding-left: 8px;
 }
 .underline{
     border:0;
@@ -1037,163 +1038,79 @@ span.gold_ribbon{
     border-style: dotted;
     border-color: #888;
 }
-a.link-icon:before,a.link-icon.link-file[id]:before {
-    content: "\f016"; /* generic file icon */
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transform: translate(0, 0);
-    width: 20px;
-    text-align: right;
-    margin-right: 10px;
-}
-a[id$=".txt"].link-icon:before, a.link-icon.link-text[id]:before {
-    content: "\f0f6"; /*Text*/
-}
-a[id$=".pdf"].link-icon:before,a.link-icon.link-pdf[id]:before {
-    content: "\f1c1"; /*PDF*/
-}
-a[id$=".doc"].link-icon:before,a[id$=".docx"].link-icon:before,a.link-icon.link-word[id]:before {
-    content: "\f1c2"; /*Word*/
-}
-a[id$=".xls"].link-icon:before,a[id$=".xlsx"].link-icon:before,a.link-icon.link-excel[id]:before {
-    content: "\f1c3"; /*Excel*/
-}
-a[id$=".ppt"].link-icon:before,a[id$=".pptx"].link-icon:before,a.link-icon.link-powerpoint[id]:before {
-    content: "\f1c4"; /*Powerpoint*/
-}
-a[id$=".gif"].link-icon:before,
-a[id$=".jpg"].link-icon:before,
-a[id$=".jpeg"].link-icon:before,
-a[id$=".png"].link-icon:before,
-a[id$=".bmp"].link-icon:before,
-a[id$=".tif"].link-icon:before,
-a.link-icon.link-image[id]:before {
-    content: "\f1c5"; /*Image*/
-}
-a[id$=".zip"].link-icon:before,
-a[id$=".zipx"].link-icon:before,
-a[id$=".rar"].link-icon:before,
-a[id$=".tar"].link-icon:before,
-a[id$=".gz"].link-icon:before,
-a[id$=".dmg"].link-icon:before,
-a[id$=".iso"].link-icon:before,
-a.link-icon.link-archive[id]:before {
-    content: "\f1c6"; /*Archive*/
-}
-a[id$=".wav"].link-icon:before,
-a[id$=".mp3"].link-icon:before,
-a[id$=".fla"].link-icon:before,
-a[id$=".flac"].link-icon:before,
-a[id$=".ra"].link-icon:before,
-a[id$=".rma"].link-icon:before,
-a[id$=".aif"].link-icon:before,
-a[id$=".aiff"].link-icon:before,
-a[id$=".aa"].link-icon:before,
-a[id$=".aac"].link-icon:before,
-a[id$=".aax"].link-icon:before,
-a[id$=".ac3"].link-icon:before,
-a[id$=".au"].link-icon:before,
-a[id$=".ogg"].link-icon:before,
-a[id$=".avr"].link-icon:before,
-a[id$=".3ga"].link-icon:before,
-a[id$=".flac"].link-icon:before,
-a[id$=".mid"].link-icon:before,
-a[id$=".midi"].link-icon:before,
-a[id$=".m4a"].link-icon:before,
-a[id$=".mp4a"].link-icon:before,
-a[id$=".amz"].link-icon:before,
-a[id$=".mka"].link-icon:before,
-a[id$=".asx"].link-icon:before,
-a[id$=".pcm"].link-icon:before,
-a[id$=".m3u"].link-icon:before,
-a[id$=".wma"].link-icon:before,
-a[id$=".xwma"].link-icon:before,
-a.link-icon.link-audio[id]:before {
-    content: "\f1c7"; /*Audio*/
-}
-a[id$=".avi"].link-icon:before,
-a[id$=".mpg"].link-icon:before,
-a[id$=".mp4"].link-icon:before,
-a[id$=".mkv"].link-icon:before,
-a[id$=".mov"].link-icon:before,
-a[id$=".wmv"].link-icon:before,
-a[id$=".vp6"].link-icon:before,
-a[id$=".264"].link-icon:before,
-a[id$=".vid"].link-icon:before,
-a[id$=".rv"].link-icon:before,
-a[id$=".webm"].link-icon:before,
-a[id$=".swf"].link-icon:before,
-a[id$=".h264"].link-icon:before,
-a[id$=".flv"].link-icon:before,
-a[id$=".mk3d"].link-icon:before,
-a[id$=".gifv"].link-icon:before,
-a[id$=".oggv"].link-icon:before,
-a[id$=".3gp"].link-icon:before,
-a[id$=".m4v"].link-icon:before,
-a[id$=".movie"].link-icon:before,
-a[id$=".divx"].link-icon:before,
-a.link-icon.link-video[id]:before {
-    content: "\f1c8"; /*Video*/
-}
-a[id$=".css"].link-icon:before,
-a[id$=".js"].link-icon:before,
-a[id$=".py"].link-icon:before,
-a[id$=".git"].link-icon:before,
-a[id$=".py"].link-icon:before,
-a[id$=".cpp"].link-icon:before,
-a[id$=".h"].link-icon:before,
-a[id$=".ini"].link-icon:before,
-a[id$=".config"].link-icon:before,
-a.link-icon.link-code[id]:before {
-    content: "\f1c9"; /*code*/
-}
-a[id$=".exe"].link-icon:before,
-a[id$=".jar"].link-icon:before,
-a[id$=".dll"].link-icon:before,
-a[id$=".bat"].link-icon:before,
-a[id$=".pl"].link-icon:before,
-a[id$=".scr"].link-icon:before,
-a[id$=".msi"].link-icon:before,
-a[id$=".app"].link-icon:before,
-a[id$=".deb"].link-icon:before,
-a[id$=".apk"].link-icon:before,
-a[id$=".jar"].link-icon:before,
-a[id$=".vb"].link-icon:before,
-a[id$=".prg"].link-icon:before,
-a[id$=".sh"].link-icon:before,
-a.link-icon.link-exe[id]:before {
-    content: "\f085"; /*Executable*/
-}
-
-a[id$=".com"].link-icon:before,
-a[id$=".net"].link-icon:before,
-a[id$=".org"].link-icon:before,
-a[id$=".edu"].link-icon:before,
-a[id$=".gov"].link-icon:before,
-a[id$=".mil"].link-icon:before,
-a[id$="/"].link-icon:before,
-a[id$=".html"].link-icon:before,
-a[id$=".htm"].link-icon:before,
-a[id$=".xhtml"].link-icon:before,
-a[id$=".jhtml"].link-icon:before,
-a[id$=".php"].link-icon:before,
-a[id$=".php3"].link-icon:before,
-a[id$=".php4"].link-icon:before,
-a[id$=".php5"].link-icon:before,
-a[id$=".phtml"].link-icon:before,
-a[id$=".asp"].link-icon:before,
-a[id$=".aspx"].link-icon:before,
-a[id$=".cfm"].link-icon:before,
-a[id*="?"].link-icon:before,
-a[id*="#"].link-icon:before,
-a.link-icon:not([id*='.']):before,
-a.link-icon.link[id]:before {
-    content: "\f0c1"; /*link*/
-}
 
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
 .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+.title_IX-box {
+    width: 130px;
+    height: 130px;
+    border:none;
+    padding: 3px !important;
+    background-color: #f8f8f8;
+    margin-top: 0px;
+    overflow: hidden;
+    float: left;
+    text-align: left;
+    margin-top: 3px;
+
+}
+.title_IX-box-container {
+    position: relative;
+    padding-right: 3px;
+}
+.title_IX-text{
+    text-align: left;
+    font-size: 10px;
+}
+.title_IX-text b{
+    color: #5d5d5d;
+    font-size: 11px;
+}
+.logoImage{
+    width:  100%;
+    height: 100%;
+    /*background-color: #CCC;*/
+    padding:5px; 
+    max-width: 220px;
+    max-height: 100px;
+}
+.logoImage1{
+    width:  100%;
+    height: 100%;
+    /*background-color: #CCC;*/
+    padding:5px; 
+    max-width: 100%;
+    max-height: auto;
+}
+.h3Height h3, .h3Height a{
+    height: 60px;  
+}
+.h3Height div{
+   /* border: 1px solid red;*/
+    height: 60px; 
+    max-width: 220px;
+    max-height: 100px;
+}
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.translator-box {
+    margin-top: 20px;
+    
+}
+.translator-work {
+    margin-top: 50px;
+    padding-bottom: 10px;   
+    overflow: hidden;
+    float: left;
+    padding-left: 40px;   
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+   
+}
